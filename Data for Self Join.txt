@@ -1,0 +1,26 @@
+drop table neoemp;
+create table neoemp (employee_id number(5) primary key, 
+first_name varchar2(20), 
+last_name varchar2(20), 
+city varchar2(20), 
+manager_id number(5), dept_code varchar(10) references departments(d_code) on delete set null);  
+insert into neoemp values(111,'Kishor' ,'Pawar', 'Mumbai', null, 'WD');
+insert into neoemp values(121,'Kamal' ,'Chopra', 'Kolkata', null,'SM');
+insert into neoemp values(112,'Rupa' ,'Wagh', 'Pune', 111, 'HR');
+insert into neoemp values(131,'karuna' ,'Trivedi', 'Mumbai', 121,'LD');
+insert into neoemp values(115,'rupali' ,'Patil', 'pune', 121,'LD');
+insert into neoemp values(114,'Kaival' ,'triveni', 'Delhi',111,'WD');
+insert into neoemp values(101,'Kuldeep' ,'Pawar', 'Solapur',null,'SM');
+insert into neoemp values(155,'Yash' ,'Chopra', 'Delhi',null,'SM');
+insert into neoemp values(255,'Pavan' ,'Kumar', 'Mumbai',101,'HR');
+insert into neoemp values(102,'Sonu' ,'Chaturvedi', 'Kolkata',155,'WD');
+insert into neoemp values(109,'Amar' ,'Jadhav', 'PUNE', 101,'WD');
+insert into neoemp values(110,'Amit' ,'Jagdale', 'Delhi',109,'HR');
+insert into neoemp values(555,'Hari','Kumar','pune',null,'HR');
+insert into neoemp values (333,'Kish', 'Kumar' ,'Pune',null,'LD');
+insert into neoemp values(545,'Lata','Jain','Satara',112,'SM');
+insert into neoemp values (323,'Kishori' ,'Kumar' ,'Mumbai',333,'LD');
+insert into neoemp values (444,'Kishori' ,'Jagri' ,'Mumbai',333,'SM');
+insert into neoemp values (888,'Ruman' ,'Soni' ,'Mumbai',333,'WD');
+insert into neoemp values(869,'Manisha' ,'Pawar', 'Pune',null,'HR');
+
