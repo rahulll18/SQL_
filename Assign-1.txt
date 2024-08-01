@@ -1,0 +1,8 @@
+Q. Display which employee living in which city
+   select trim(first_name) , trim(city) from employees where city is NOT NULL;
+
+Q. Display employee name with their salary and commission. put alias
+    select trim(first_name) as Emp_name , salary , commission from employees;
+
+Q. Display employee name with their department code 
+    select trim(first_name) , dept_code  from employees; 

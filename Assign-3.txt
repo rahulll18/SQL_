@@ -1,0 +1,3 @@
+Display employees in ascending of there lastname and if lastnamme is same then ascending order of their firstname
+How can u show employees coming from city Kolhapur, Solapur, Visapur, Nagpur, Malkapur.. where we dont know the spelling but know the last 3 characters
+Display employees from SM deparment having age not in the range of 50 to 60 

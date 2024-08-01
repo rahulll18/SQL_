@@ -1,0 +1,45 @@
+
+Q. Describe employee table
+desc employee;   // describe table structure
+
+column selection : projection
+row selection : selection
+how to restrict column selection : by selecting particular columns 
+how to restrict row selection : by using where clause
+
+Q. Show id, firstname, lastname and city where employee live.
+select employees_id, first_name, last_name ,  city
+from employees;
+
+Q. Show all information of all employees
+select *
+from employees;
+
+select employees_id, dept_code, age, first_name, last_name, salary, commission, city
+from employees;
+
+Q. select employee id, first name and last name put alias to all columns
+select employees_id eid, first_name "name", last_name "sir name"
+from employees;
+
+Note : 1. if u want to preserve the case of alias then put it in ""
+2. if u have space in ur alias then u have to put alias in ""
+
+
+Q. Describe department table
+desc department;
+
+Q. diplay name and budget of the department
+select d_name, d_budget 
+from departments;
+
+Q. display above query with alias(nickname for heading) 'name', 'budget'
+select d_name "name", d_budget "budget" 
+from departments;
+
+Q. Display all information of all departments
+select * 
+from departments;
+
+
+

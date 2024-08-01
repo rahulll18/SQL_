@@ -1,0 +1,5 @@
+Q. Display employees having salary in the range of 60000 to 80000
+Q. Display employees living in cities other than Pune, Mumbai ,Satara
+Q. Display employees having age greater than 60
+Q. Display employees working in LD deparment
+Q. Which employees from WD department are older than 60

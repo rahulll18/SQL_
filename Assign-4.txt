@@ -1,0 +1,5 @@
+How many employees from same city, working in same deparment
+Display records in desending order by salary, use column number in orderby
+Display employee id, salary and commission in descending order of commission, use column number in orderby
+
+Display sum of salary of employees citywise

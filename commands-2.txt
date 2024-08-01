@@ -1,0 +1,175 @@
+desc employee;
+Q. display all cities from employee table
+select city from employee;
+
+Q. display distinct city from employee;   
+
+select distinct city
+from employees;   /*11 rows*/  // (unique city selected)
+
+select distinct city, employees_id
+from employees;  /*28 rows*/
+
+
+
+// where clause : restrict the rows, come after from clause
+
+// relational operators, logical operators
+Q. display employees having salary = 75000
+select employees_id, salary
+from employees
+where salary=75000
+
+Q.  How many employees have salary 75000
+select count(employees_id)
+from employees
+where salary=75000
+
+/*table will be searched in database : from clause
+condition on whihc column : that column is searched
+condition checked : where clause : n rows
+columns will be selected : select clause  projection
+rows selected wil given as output
+*/
+
+Q. display employees having salary > 75000
+
+select employees_id, salary
+from employees
+where salary > 75000;   /*records with salary 75000 will not be included*/
+
+Q. display employees having salary  75000 or greater
+select employees_id, salary
+from employees
+where salary >= 75000; 
+
+Q. display employees having salary other than 75000
+
+select employees_id, salary
+from employees
+where salary != 75000;
+
+select employees_id, salary
+from employees
+where salary <> 75000;
+
+
+Q. Display employees living in Pune
+select employees_id, first_name, city 
+from employees
+where city='Pune'; /*case sensitive*/
+
+select employees_id, first_name, city 
+from employees
+where upper(trim(city))='PUNE'; 
+ /*column, comparision value : uppercase then compared*/
+
+Q. Display employees from Satara
+select employees_id, first_name, city 
+from employees
+where city='Satara'
+
+select employees_id, first_name, city 
+from employees
+where lower(trim(city))='satara'
+
+
+Q. comparision with string
+
+select * from employee
+where city>'Pune';
+
+select * from employee
+where city<'Pune';
+
+insert into employee values (633, 'Harshada','Pujari','Punewale', 45,56000,1000,'WD');
+
+Q. show employees living in city other than pune
+
+select * from employees 
+where upper(city) != 'PUNE';
+
+
+
+
+
+
+
+
+
+
+desc employee;
+Q. display all cities from employee table
+select city from employee;
+select distinct city from employee;   // (unique cities selected)
+select distinct city, employee_id from employee;   // (unique record selected)
+
+Q. What is salary of emmployees (display unqie salaries)
+select distinct salary from employee;
+
+// where clause : restrict the rows, come after from clause
+// relational operators, logical operators
+/* 
+c1 OR c2
+T OR F ==> T
+F OR T ==> T
+T OR T ==> T
+F OR F ==> F
+
+c1 AND c2 
+T AND F ==> F
+F AND T ==> F
+T AND T ==> T
+F AND F ==> F
+*/
+Q. display employees having salary = 75000 or = 56000, 98000
+select *
+from employee
+where salary = 75000 OR salary =56000 OR salary = 98000;
+
+Q. Display employee who are either working in HR department or have salary >70000
+select * from employee where dept_code = 'HR' OR salary>70000;
+
+Q. display employees having salary = 75000 or = 56000, 98000
+select *
+from employee
+where salary IN (75000,56000,98000)  /*work as OR*/
+
+Q. display employees having salary other than 75000, 56000, 98000
+
+select *
+from employee
+where salary != 75000 AND salary !=56000  AND salary != 98000;
+
+Q. Which employees from mumbai have no any commmission
+select * from employees
+where trim(upper(city)) = 'MUMBAI' and commission is null
+
+
+select *
+from employee
+where salary NOT IN (75000,56000,98000)  /*work as AND*/
+
+Q. Who are the employees in HR department having salary >=70000
+
+select * from employee where dept_code='HR' AND salary>=70000
+
+Q. Show employees having commision from 2000 to 4000
+
+select * from employee
+where commission >= 2000 AND commission <=4000
+select * from employee
+where  commission <=4000 AND commission >= 2000
+
+select * from employee where commission between 2000 AND 4000; /*records with low range and with high range will be included*/
+
+Q. Show employees having age >50 and <60
+select * from employee
+  where age >50  AND age < 60;
+  
+  /*below will be wrong query as it will include low and high range but we dont want it*/
+  select * from employee
+  where age between 50  AND 60;
+
+
+
