@@ -1,3 +1,18 @@
 Display employees in ascending of there lastname and if lastnamme is same then ascending order of their firstname
+select lower(trim(first_name)) as first_name , lower(trim(last_name)) as last_name
+from employees
+order by  lower(trim(last_name)),lower(trim(first_name))
+
 How can u show employees coming from city Kolhapur, Solapur, Visapur, Nagpur, Malkapur.. where we dont know the spelling but know the last 3 characters
+SELECT EMPLOYEES_ID, FIRST_NAME , CITY
+FROM employees
+WHERE city LIKE '%olhapur'
+   OR city LIKE '%olapur'
+   OR city LIKE '%isapur'
+   OR city LIKE '%agpur'
+   OR city LIKE '%lkapur';
+
 Display employees from SM deparment having age not in the range of 50 to 60 
+select lower(trim(first_name)) , dept_code , age
+from employees
+where age not between 50 and 60

@@ -1,5 +1,25 @@
 Q. Display employees having salary in the range of 60000 to 80000
+select (trim(first_name) || ' ' || trim(last_name)) as Full_name , salary
+from employees
+where salary between 60000 and 80000;
+
+
 Q. Display employees living in cities other than Pune, Mumbai ,Satara
+    select (trim(first_name) || ' ' || trim(last_name)) as Full_name , lower(trim(city))
+    from employees
+    where lower(trim(city)) NOT IN ('pune','mumbai','satara');
+
 Q. Display employees having age greater than 60
+    select (trim(first_name) || ' ' || trim(last_name)) as Full_name , age
+    from employees
+    where age > 60;
+
 Q. Display employees working in LD deparment
+    select (trim(first_name) || ' ' || trim(last_name)) as Full_name , dept_code
+    from employees
+    where dept_code = 'LD';
+
 Q. Which employees from WD department are older than 60
+    select (trim(first_name) || ' ' || trim(last_name)) as Full_name , dept_code, age
+    from employees
+    where dept_code = 'WD' and age > 60;

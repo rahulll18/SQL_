@@ -1,5 +1,16 @@
 How many employees from same city, working in same deparment
+select lower(trim(city)) , dept_code , count(employees_id)
+from employees
+group by lower(trim(city)),  dept_code;
+
 Display records in desending order by salary, use column number in orderby
+select trim(first_name) , salary from employees order by 2;
+
 Display employee id, salary and commission in descending order of commission, use column number in orderby
+select trim(first_name) , salary , commission from employees order by 3;
 
 Display sum of salary of employees citywise
+select lower(trim(city)) , sum(salary)
+from employees
+group by lower(trim(city))
+having lower(trim(city)) is NOT NULL;
