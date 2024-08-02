@@ -1,0 +1,23 @@
+Q. CASE
+Assign committiees like following to employees
+Employees from Mumbai,mumbai ==> Singing
+Employees from Pune,pune,PUNE==> Dancing
+Employees from Satara,  SATARA ==> Ankering
+rest employees  ==> Cleaning
+
+Q. subquery
+Who is Elder employee from every city
+
+Q. select employees from Mumbai  make union with employees from Pune
+
+Q. What is the role of department of employees where they are working
+Write above query in following format
+Vivek Kumar works in Learning and Development deparment having role [display role here]
+
+Q.Who is the employee taking highest commision
+
+Q. Display employees taking commission lower than commission of employee with id 109
+
+Q. Display employees from SM department who have commission greater than all of employees from LD department
+
+Q. Display employees from SM department who have commission greater than any of employees from LD department

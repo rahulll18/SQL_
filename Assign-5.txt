@@ -1,0 +1,18 @@
+
+Write queries for instr, substr on students student table
+select INSTR(city,'pur',1,1),city from employees;
+select SUBSTR(city,0,3),city from employees;
+
+find greatest marks among all marks for every student
+select std_id,GREATEST(ph_marks,ch_marks,maths_marks,bio_marks) as "Highest Marks" from students;
+
+find least marks among all marks for every student
+select std_id,LEAST(ph_marks,ch_marks,maths_marks,bio_marks) as "Least Marks" from students;
+
+make average of all marks of each student (marks are horizontal). make round on average
+select std_id,ROUND((ph_marks+ch_marks+maths_marks+bio_marks)/3) as "Average Marks" from students;
+
+Find out role of new_time funciton of date
+SELECT NEW_TIME(TO_DATE('08-01-24 02:04:45', 'MM-DD-YY HH24:MI:SS'), 'GMT', 'AST')
+"New Date and Time"
+FROM DUAL;

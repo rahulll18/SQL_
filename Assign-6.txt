@@ -1,0 +1,10 @@
+Write a query for replace function, translate function in string function
+Show the difference using example
+ans. Select  TRANSLATE('ABCED','AC','ac') from dual;
+result : aBcED
+
+ans. Select REPLACE('ABCED','AC','ac') from dual;
+result: ABCED
+
+ans. Select REPLACE('ABCED','AB','acvv') from dual;
+result: acvvCED
